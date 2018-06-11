@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="504.0" style="-fx-background-color: lightblue;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fcfs.FXMLDocumentController">
+    <stylesheets>
+        <URL value="@start_page.css" />
+    </stylesheets>
+   <children>
+      <Button id="btn_start" fx:id="btn_start" disable="true" layoutX="120.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleBtnStart" text="TO PROCESS SCHEDULING" textFill="#186539">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <Label fx:id="label1" layoutX="457.0" layoutY="334.0" text="Label" />
+      <AnchorPane id="process_pane" fx:id="process_pane" layoutX="105.0" layoutY="67.0" prefHeight="222.0" prefWidth="327.0" rotate="6.3" style="-fx-border-color: blue; -fx-border-width: 5px;" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="89.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#8fb955" />
+               </light>
+            </Lighting>
+         </effect>
+         <children>
+            <RadioButton id="rad_fcfs" fx:id="rad_fcfs" layoutX="21.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleRadSelect" style="-fx-label-padding: 6px;" styleClass="process_radio" text="First Come First Serve">
+               <toggleGroup>
+                  <ToggleGroup fx:id="process_selection" />
+               </toggleGroup>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rad_sjf" layoutX="31.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleRadSelect" styleClass="process_radio" text="Shortest Job First" toggleGroup="$process_selection">
+               <font>
+                  <Font size="20.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="rad_srt" layoutX="14.0" layoutY="125.0" mnemonicParsing="false" onAction="#handleRadSelect" styleClass="process_radio" text="Shortest Remaining Time" toggleGroup="$process_selection">
+               <font>
+                  <Font size="20.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="rad_rr" layoutX="23.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleRadSelect" styleClass="process_radio" text="Round Robin" toggleGroup="$process_selection">
+               <font>
+                  <Font size="20.0" />
+               </font></RadioButton>
+         </children>
+      </AnchorPane>
+      <Label id="title" layoutX="88.0" layoutY="26.0" styleClass="title" text="Process Scheduling Simulator">
+         <font>
+            <Font name="SansSerif Bold" size="25.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

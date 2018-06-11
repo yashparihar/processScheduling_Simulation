@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#process_pane
+{
+    border: 5px double cornflowerblue;
+    background-color: red;
+}
+
+.process_radio
+{
+ background-color: red;  
+}
+
+
+.title
+{
+    
+}

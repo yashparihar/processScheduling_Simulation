@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="689.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fcfs.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="16.0" layoutY="190.0" onAction="#handleBtn" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: green;" text="Submit" textFill="#141414">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField id="txtid" fx:id="txtid" layoutX="20.0" layoutY="20.0" promptText="Process Id">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtbt" layoutX="20.0" layoutY="60.0" promptText="Burst Time">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtat" layoutX="20.0" layoutY="99.0" prefHeight="37.0" prefWidth="199.0" promptText="Arrival Time">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+     
+
+      <TableView fx:id="j_tbl" layoutX="243.0" layoutY="4.0" prefHeight="167.0" prefWidth="444.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn prefWidth="86.0" text="JID">
+              <cellValueFactory><PropertyValueFactory property="j_id" />
+        </cellValueFactory>
+          </TableColumn>
+          
+          <TableColumn prefWidth="83.0" text="JBT">
+            <cellValueFactory><PropertyValueFactory property="j_bt" />
+        </cellValueFactory>
+          </TableColumn>
+          
+            <TableColumn prefWidth="83.0" text="JAT">
+              <cellValueFactory><PropertyValueFactory property="j_at" />
+        </cellValueFactory>
+          </TableColumn>
+          
+           <TableColumn prefWidth="83.0" text="JWT">
+              <cellValueFactory><PropertyValueFactory property="j_wt" />
+        </cellValueFactory>
+          </TableColumn>
+          
+           <TableColumn prefWidth="83.0" text="JTAT">
+              <cellValueFactory><PropertyValueFactory property="j_tat" />
+        </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <Label fx:id="avg" layoutX="501.0" layoutY="240.0" text="0">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblcp" layoutX="501.0" layoutY="196.0" text="0">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font></Label>
+      <HBox fx:id="fhb" layoutX="195.0" layoutY="308.0" prefHeight="100.0" prefWidth="484.0" style="-fx-background-color: white; -fx-padding: 15px;" />
+      <ColorPicker fx:id="fcp" layoutX="29.0" layoutY="151.0" promptText="Select Color" />
+      <Button fx:id="implement" layoutX="14.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleBtnImp" prefHeight="37.0" prefWidth="137.0" style="-fx-background-color: green;" text="IMPLEMENT" textFill="#141414" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="542.0" AnchorPane.topAnchor="358.0">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font></Button>
+      <Label layoutX="267.0" layoutY="196.0" text="Avg Waiting Time">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="240.0" text="Avg Turn Around Time">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="335.0" layoutY="284.0" text="Gantt Chart" textFill="#cd1521">
+         <font>
+            <Font name="Times New Roman Bold" size="26.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
